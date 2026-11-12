@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#191622">
+  <title>Awesome Search Bar</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="tutorial">
+    <section class="html-window window" aria-label="HTML code preview">
+      <div class="window-head"><span class="dots"><i></i><i></i><i></i></span><span>index.html</span><b>@CODING.STELLA</b></div>
+      <pre><code><comment>&lt;!-- Search bar --&gt;</comment>
+<tag>&lt;form</tag> class=<string>"search"</string> <tag>role</tag>=<string>"search"</string><tag>&gt;</tag>
+  <tag>&lt;input</tag> type=<string>"search"</string>
+    placeholder=<string>"Search"</string><tag>&gt;</tag>
+  <tag>&lt;button</tag> type=<string>"submit"</string><tag>&gt;</tag>
+    <tag>&lt;svg</tag> ...<tag>&gt;&lt;/svg&gt;</tag>
+  <tag>&lt;/button&gt;</tag>
+<tag>&lt;/form&gt;</tag></code></pre>
+    </section>
+
+    <section class="demo">
+      <form class="search" id="searchForm" role="search">
+        <input id="searchInput" type="search" placeholder="Search" aria-label="Search" autocomplete="off">
+        <button type="submit" aria-label="Submit search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.2"></circle><path d="m15.4 15.4 4.2 4.2"></path></svg>
+        </button>
+      </form>
+      <h1><span>Awesome</span> Search Bar</h1>
+      <p class="result" id="result" aria-live="polite"></p>
+    </section>
+
+    <section class="css-windows">
+      <article class="window css-window">
+        <div class="window-head"><span class="dots"><i></i><i></i><i></i></span><span>style.css</span></div>
+        <pre><code><selector>.search</selector> {
+  display: flex;
+  align-items: center;
+  width: 48px;
+  height: 42px;
+  border-radius: 5px;
+  background: linear-gradient(120deg,#d13d69,#851b48);
+  transition: width .4s ease;
+}
+<selector>.search:focus-within</selector> {
+  width: 320px;
+}
+<selector>input</selector> {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+}
+<selector>button</selector> {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+}</code></pre>
+      </article>
+      <article class="window css-window second">
+        <div class="window-head"><span class="dots"><i></i><i></i><i></i></span><span>style.css</span></div>
+        <pre><code><selector>.search input</selector> {
+  opacity: 0;
+  padding: 0;
+  transition: opacity .25s;
+}
+<selector>.search:focus-within input</selector> {
+  opacity: 1;
+  padding: 0 12px;
+}
+<selector>.search button svg</selector> {
+  width: 18px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 2;
+}
+<selector>.search input::placeholder</selector> {
+  color: #f4dce6;
+}</code></pre>
+      </article>
+    </section>
+    <footer><span class="creator">✦ &nbsp; @coding.stella</span><span>HTML · CSS · JS</span></footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
